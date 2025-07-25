@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - 'dev'
+      - 'main'
 
 jobs:
   ci-pipeline:
@@ -44,7 +44,7 @@ jobs:
         with:
           context: . # 빌드할 도커 파일이 있는 디렉토리
           push: true # 이미지 빌드 후 Docker Hub 에 이미지 푸시 여부
-          tags: ${{ secrets.DOCKER_USERNAME }}/bus-notice:latest # Docker Hub 사용자 이름, 리포지토리 이름, 빌드된 이미지에 붙일 태그
+          tags: ${{ secrets.DOCKER_USERNAME }}/test-server:latest # Docker Hub 사용자 이름, 리포지토리 이름, 빌드된 이미지에 붙일 태그
           no-cache: true # 이미지 빌드 시 캐시 사용 여부
 
       # EC2 인스턴스에 Docker 이미지 배포

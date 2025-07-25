@@ -4,7 +4,7 @@ name: Java CICD
     }
   push:
     branches:
-     - v3
+     - main
 jobs:
   ci-pipeline:
     runs-on: ubuntu-latest

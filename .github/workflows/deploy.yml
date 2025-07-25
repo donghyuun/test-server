@@ -60,4 +60,4 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/test-server:latest
             docker stop test-server
             docker rm $(docker ps --filter 'status=exited' -a -q)
-            docker run -d --name test-server --log-driver=syslog --network test-server -p 8082:8080 ${{ secrets.DOCKER_USERNAME }}/test-server:latest
+            docker run -d --name test-server --log-driver=syslog -p 8082:8080 ${{ secrets.DOCKER_USERNAME }}/test-server:latest

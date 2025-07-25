@@ -5,7 +5,7 @@ name: Java CICD
     }
   push:
     branches:
-      - main
+      - v2
 
 jobs:
   ci-pipeline:
